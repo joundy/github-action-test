@@ -1,0 +1,19 @@
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+    secrets:
+      envPAT:
+        required: true
+env: 
+  USERNAME: ${{ on.workflow_call.inputs.username }}
+jobs:
+  deploy-changes:
+    name: deploy-changes 
+    runs-on: self-hosted 
+    steps:
+    - name: test
+      run: |-
+        echo $USERNAME
