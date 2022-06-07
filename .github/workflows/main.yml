@@ -9,7 +9,9 @@ on:
         required: true
 env: 
   USERNAME: ${{ on.workflow_call.inputs.username }}
-deploy-changes:
-  name: deploy-changes 
-  steps:
-  - uses: actions/checkout@v3
+jobs:
+  deploy-changes:
+    name: deploy-changes 
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
