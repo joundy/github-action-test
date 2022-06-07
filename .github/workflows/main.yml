@@ -9,6 +9,7 @@ env:
   USERNAME: ${{ on.workflow_call.inputs.username }}
 jobs:
   deploy-changes:
+    runs-on: self-hosted
     name: deploy-changes 
     steps:
     - name: Checkout
