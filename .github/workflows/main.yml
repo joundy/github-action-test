@@ -4,9 +4,6 @@ on:
       username:
         required: true
         type: string
-    secrets:
-      envPAT:
-        required: true
 env: 
   USERNAME: ${{ on.workflow_call.inputs.username }}
 jobs:
